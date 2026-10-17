@@ -1,6 +1,6 @@
 import { FaceLandmarker, FilesetResolver, ImageSegmenter } from '@mediapipe/tasks-vision';
 import type { WorkerRequest, WorkerResponse, PortraitResult } from '@id-photo/ai-engine';
-import { headShoulderRegion, cropRgba } from '@id-photo/ai-engine';
+import { headShoulderRegion, cropRgba, workerAsset } from '@id-photo/ai-engine';
 import type { Point } from '@id-photo/spec-engine';
 import { refinePortraitEdges, looseHairKeepMask } from '@id-photo/photo-engine';
 import { hivisionMatte } from '@id-photo/ai-engine/hivision';
@@ -8,9 +8,9 @@ import { hairClasses } from '@id-photo/ai-engine/hair-cleanup';
 let face: FaceLandmarker, segmenter: ImageSegmenter;
 let ready: Promise<void> | undefined;
 async function initialize() {
-  const files = await FilesetResolver.forVisionTasks('/wasm');
+  const files = await FilesetResolver.forVisionTasks(workerAsset('wasm'));
   face = await FaceLandmarker.createFromOptions(files, {
-    baseOptions: { modelAssetPath: '/models/face_landmarker.task', delegate: 'CPU' },
+    baseOptions: { modelAssetPath: workerAsset('models/face_landmarker.task'), delegate: 'CPU' },
     runningMode: 'IMAGE',
     numFaces: 2,
   });
@@ -88,9 +88,12 @@ self.onmessage = (event: MessageEvent<WorkerRequest>) => {
         };
       } else {
         segmenter ??= await ImageSegmenter.createFromOptions(
-          await FilesetResolver.forVisionTasks('/wasm'),
+          await FilesetResolver.forVisionTasks(workerAsset('wasm')),
           {
-            baseOptions: { modelAssetPath: '/models/selfie_segmenter.tflite', delegate: 'CPU' },
+            baseOptions: {
+              modelAssetPath: workerAsset('models/selfie_segmenter.tflite'),
+              delegate: 'CPU',
+            },
             runningMode: 'IMAGE',
             outputConfidenceMasks: true,
             outputCategoryMask: false,

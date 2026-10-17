@@ -14,7 +14,7 @@
 | Tailwind CSS                               | 前端样式构建       | https://github.com/tailwindlabs/tailwindcss                                   |
 | Playwright / Vitest / esbuild / TypeScript | 开发与测试         | 各依赖 package.json 和 LICENSE                                                |
 
-模型固定下载 URL、哈希和实际字节大小记录在 models/manifest.json。MediaPipe 下载自 Google 官方托管资源；其模型卡与再分发边界仍需在对外发布前核对，不能把文档页面的 CC BY 许可当成权重许可。
+模型固定下载 URL、哈希和实际字节大小记录在 models/manifest.json。MediaPipe 下载自 Google 官方托管资源；不能把文档页面的 CC BY 许可当成权重许可。2026-10-17 核对官方页面链接的模型卡 PDF：Selfie Segmentation、BlazeFace (Short Range)、Face Mesh V2 与 Blendshape V2（后三者组成 face_landmarker.task）的许可部分均链接 Apache License 2.0（通过 PDF 中的许可链接核对，未逐字渲染全文）。Apache-2.0 允许附带许可证再分发，models/MediaPipe-LICENSE 随静态资产发布。
 
 新增 Google MediaPipe SelfieMulticlass 256×256 float32 v1，用于用户主动开启的耳下散发分类。2026-10-02 核对[官方模型卡](https://storage.googleapis.com/mediapipe-assets/Model%20Card%20Multiclass%20Segmentation.pdf) 中明确的 Apache License 2.0；许可证 models/MediaPipe-LICENSE 来自 google-ai-edge/mediapipe v0.10.32 并随资产提供。固定 URL、大小和 SHA-256 已记录 manifest，权重未修改且不提交 Git。该许可核对仅针对新增多分类模型，不代替其他模型的发布前核验。
 

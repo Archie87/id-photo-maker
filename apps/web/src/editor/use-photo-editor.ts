@@ -25,6 +25,7 @@ import {
   downloadBlob,
 } from '@id-photo/photo-engine';
 import { createPrintPdf, renderSheet, sheets } from '@id-photo/print-engine';
+const providerOptions = { basePath: process.env.NEXT_PUBLIC_BASE_PATH ?? '' };
 export function usePhotoEditor() {
   const [source, setSource] = useState<HTMLCanvasElement | null>(null),
     [portrait, setPortrait] = useState<HTMLCanvasElement | null>(null),
@@ -126,7 +127,7 @@ export function usePhotoEditor() {
     setError('');
     setMessage('本地 AI 正在识别耳下散发…首次会加载头发识别模型。');
     try {
-      hairProvider.current = new LocalHairCleanupProvider();
+      hairProvider.current = new LocalHairCleanupProvider(providerOptions);
       const result = await hairProvider.current.analyze(
         source.getContext('2d')!.getImageData(0, 0, source.width, source.height),
       );
@@ -195,7 +196,9 @@ export function usePhotoEditor() {
       if (provider.current?.id !== desiredId) {
         provider.current?.dispose();
         provider.current =
-          mattingMode === 'hivision' ? new LocalMattingProvider() : new LocalWebProvider();
+          mattingMode === 'hivision'
+            ? new LocalMattingProvider(providerOptions)
+            : new LocalWebProvider('selfie', providerOptions);
       }
       const result = await provider.current.analyze(
         source.getContext('2d')!.getImageData(0, 0, source.width, source.height),

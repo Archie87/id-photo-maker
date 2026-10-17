@@ -1,7 +1,15 @@
+import { siteAsset } from './assets';
 import type { AnalyzeOptions, AIProvider, PortraitResult, WorkerResponse } from './types';
+export interface LocalProviderOptions {
+  /** 站点 basePath，例如 GitHub Pages 的 '/id-photo-maker'；默认部署在根路径。 */
+  basePath?: string;
+}
 export class LocalWebProvider implements AIProvider {
   readonly id: string = 'local-web';
-  constructor(private readonly matting: 'hivision' | 'selfie' | 'hair-cleanup' = 'selfie') {}
+  constructor(
+    private readonly matting: 'hivision' | 'selfie' | 'hair-cleanup' = 'selfie',
+    private readonly options: LocalProviderOptions = {},
+  ) {}
   private worker: Worker | null = null;
   private sequence = 0;
   private pending = new Map<
@@ -14,7 +22,7 @@ export class LocalWebProvider implements AIProvider {
   >();
   analyze(image: ImageData, options?: AnalyzeOptions): Promise<PortraitResult> {
     if (!this.worker) {
-      this.worker = new Worker('/worker/portrait.js');
+      this.worker = new Worker(siteAsset('worker/portrait.js', this.options.basePath));
       this.worker.onmessage = (event: MessageEvent<WorkerResponse>) => {
         const m = event.data,
           p = this.pending.get(m.id);

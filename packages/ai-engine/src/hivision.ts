@@ -1,16 +1,17 @@
 import { env, InferenceSession, Tensor } from 'onnxruntime-web/wasm';
 import manifest from '../../../models/manifest.json';
 import { hivisionInput } from './hivision-input';
+import { workerAsset } from './assets';
 let pending: Promise<InferenceSession> | undefined;
 async function initialize() {
   env.wasm.numThreads = 1;
   env.wasm.proxy = false;
   env.wasm.wasmPaths = {
-    mjs: new URL('/wasm/ort/ort-wasm-simd-threaded.mjs', self.location.origin).href,
-    wasm: new URL('/wasm/ort/ort-wasm-simd-threaded.wasm', self.location.origin).href,
+    mjs: workerAsset('wasm/ort/ort-wasm-simd-threaded.mjs'),
+    wasm: workerAsset('wasm/ort/ort-wasm-simd-threaded.wasm'),
   };
   const model = manifest.models.find((m) => m.file === 'hivision_modnet.onnx')!;
-  const response = await fetch(`/models/${model.file}`);
+  const response = await fetch(workerAsset(`models/${model.file}`));
   if (!response.ok) throw new Error('精细抠图模型未安装，请运行 pnpm models:download');
   const bytes = await response.arrayBuffer();
   const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', bytes)), (v) =>

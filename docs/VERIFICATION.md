@@ -196,3 +196,9 @@ typecheck、46 项单元测试（12 文件）、生产构建、全部 8 项 Chro
 布局改为三栏（规格/背景/构图 · 工作台 · 检查/导出），增加制作进度、空状态上传区、处理中旋转指示，正文与提示字号从 9–10 px 提高到 12–14 px；高级抠图选项折叠。修复：自定义尺寸逐键钳制（输入 35 会变成 100）、拖放经过子元素时高亮闪烁、品牌链接点击整页刷新丢失照片、单张 KB 上限可填 0/负数、排版 PDF/JPG 导出无成功提示；抠图模式或头肩选项在 AI 后改变时显示需重新处理。未改变图像算法、规格、导出像素/DPI/PDF 尺寸，未新增依赖或网络请求。
 
 本机 Chrome（dev server）验证：typecheck、46 项单元测试（12 文件）、静态生产构建、prettier 通过；Playwright 7 项通过，private-halo 因未提供 IDPM_PRIVATE_FIXTURE 跳过。三项 AI 相关用例改为先展开「高级抠图选项」。已查看 1280 px 桌面、390 px 手机及打印预览截图；1280/1440 px 无横向溢出，浏览器中确认自定义宽度输入 35 后保持 35 mm、输出 413 px。全页截图中粘性页头会出现在拼接位置，属截图方式，非布局错误。未在 Safari、iPhone 真机或 Windows 验证新布局。
+
+## 2026-10-17：GitHub Pages 子路径部署
+
+新增可选 `NEXT_PUBLIC_BASE_PATH`：Next basePath、主线程 Worker 地址使用该前缀；Worker 内 Face Landmarker、Selfie Segmenter、Hivision ONNX/WASM、头发多分类模型及 MediaPipe WASM 改为相对 Worker 脚本解析，不再写死根路径。新增 `.github/workflows/pages.yml` 与 2 项路径单测。默认根路径行为不变。
+
+验证：以 `NEXT_PUBLIC_BASE_PATH=/id-photo-maker` 构建，放到仅含 `/id-photo-maker/` 子目录的本地静态服务（根路径无模型），Chrome 中导入公开测试图，Hivision 精细抠图、耳下散发清理、蓝底预览均成功，Worker 从 `/id-photo-maker/worker/portrait.js` 加载，图标链接带前缀。根路径构建、typecheck、48 项单元测试（13 文件）、prettier、Playwright 7 项通过（private-halo 跳过）。首次推送的远程 CI（ubuntu，含 e2e）通过。Pages 工作流本身尚未在 GitHub 上运行，需仓库公开并启用 Pages 后确认。

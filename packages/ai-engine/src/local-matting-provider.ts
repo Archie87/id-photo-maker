@@ -1,8 +1,8 @@
-import { LocalWebProvider } from './local-web-provider';
+import { LocalWebProvider, type LocalProviderOptions } from './local-web-provider';
 /** Local Hivision portrait matting; failures never silently select another provider. */
 export class LocalMattingProvider extends LocalWebProvider {
   readonly id = 'local-matting';
-  constructor() {
-    super('hivision');
+  constructor(options?: LocalProviderOptions) {
+    super('hivision', options);
   }
 }
