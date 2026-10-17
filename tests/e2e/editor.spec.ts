@@ -1,8 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { existsSync, readFileSync } from 'node:fs';
 import { PDFDocument } from 'pdf-lib';
-// CI 并行跑 AI 推理时 CPU 紧张，本地解码图片可能超过默认 5 秒
-const importWait = { timeout: 20000 };
 test('manual workflow exports files and never sends photo data over the network', async ({
   page,
 }) => {
@@ -32,10 +30,7 @@ test('manual workflow exports files and never sends photo data over the network'
     mimeType: 'image/png',
     buffer: Buffer.from(image, 'base64'),
   });
-  await expect(page.getByRole('status', { name: '处理状态' })).toContainText(
-    '照片已导入',
-    importWait,
-  );
+  await expect(page.getByRole('status', { name: '处理状态' })).toContainText('照片已导入');
   await expect(page.getByRole('img', { name: '证件照预览' })).toHaveAttribute('width', '295');
   await expect(page.getByRole('img', { name: '打印文件缩略预览' })).toHaveAttribute('width', '600');
   await expect(page.getByRole('img', { name: '打印文件缩略预览' })).toHaveAttribute(
@@ -195,10 +190,7 @@ test('local AI detects and segments the optional public portrait fixture', async
   await page.getByLabel('选择照片文件').setInputFiles('tests/fixtures/portrait.jpg');
   await expect(page.getByLabel('抠图模式')).toHaveValue('hivision');
   await page.getByLabel('头肩优先分割').check();
-  await expect(page.getByRole('status', { name: '处理状态' })).toContainText(
-    '照片已导入',
-    importWait,
-  );
+  await expect(page.getByRole('status', { name: '处理状态' })).toContainText('照片已导入');
   await page.getByRole('button', { name: '本地 AI 处理', exact: false }).click();
   await expect(page.getByRole('status', { name: '处理状态' })).toContainText('本地 AI 处理完成', {
     timeout: 90000,
@@ -367,10 +359,7 @@ test('resident ID electronic preset exports exact 358×441 JPEG at 350 DPI', asy
     mimeType: 'image/png',
     buffer: Buffer.from(image, 'base64'),
   });
-  await expect(page.getByRole('status', { name: '处理状态' })).toContainText(
-    '照片已导入',
-    importWait,
-  );
+  await expect(page.getByRole('status', { name: '处理状态' })).toContainText('照片已导入');
   await page.getByRole('button', { name: '蓝色', exact: true }).click();
   await page.getByRole('button', { name: '居民身份证电子照', exact: false }).click();
   const preview = page.getByRole('img', { name: '证件照预览' });
@@ -444,10 +433,7 @@ test('manual landmarks support pointer/numeric correction and shared print previ
     mimeType: 'image/png',
     buffer: Buffer.from(image, 'base64'),
   });
-  await expect(page.getByRole('status', { name: '处理状态' })).toContainText(
-    '照片已导入',
-    importWait,
-  );
+  await expect(page.getByRole('status', { name: '处理状态' })).toContainText('照片已导入');
   await page.getByRole('button', { name: '校正关键点', exact: true }).click();
   const dialog = page.getByRole('dialog', { name: '校正关键点' });
   await expect(dialog).toBeVisible();
