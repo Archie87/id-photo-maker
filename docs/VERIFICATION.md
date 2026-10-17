@@ -202,3 +202,7 @@ typecheck、46 项单元测试（12 文件）、生产构建、全部 8 项 Chro
 新增可选 `NEXT_PUBLIC_BASE_PATH`：Next basePath、主线程 Worker 地址使用该前缀；Worker 内 Face Landmarker、Selfie Segmenter、Hivision ONNX/WASM、头发多分类模型及 MediaPipe WASM 改为相对 Worker 脚本解析，不再写死根路径。新增 `.github/workflows/pages.yml` 与 2 项路径单测。默认根路径行为不变。
 
 验证：以 `NEXT_PUBLIC_BASE_PATH=/id-photo-maker` 构建，放到仅含 `/id-photo-maker/` 子目录的本地静态服务（根路径无模型），Chrome 中导入公开测试图，Hivision 精细抠图、耳下散发清理、蓝底预览均成功，Worker 从 `/id-photo-maker/worker/portrait.js` 加载，图标链接带前缀。根路径构建、typecheck、48 项单元测试（13 文件）、prettier、Playwright 7 项通过（private-halo 跳过）。首次推送的远程 CI（ubuntu，含 e2e）通过。Pages 工作流本身尚未在 GitHub 上运行，需仓库公开并启用 Pages 后确认。
+
+上线结果：仓库已公开，Pages 来源为 GitHub Actions，`Deploy to GitHub Pages` 工作流成功发布到 https://archie87.github.io/id-photo-maker/ 。线上 HTML、图标、Worker、Hivision 与 Face Landmarker 模型、ONNX WASM（application/wasm）与 .mjs（text/javascript）均返回 200；Chrome 在线上导入 MediaPipe 公开测试图，Hivision 精细抠图约 7 秒完成，蓝底与 6 寸排版正常。
+
+已知问题：远程 CI 的 e2e 偶发卡在「正在本地读取图片…」（6 次运行中 2 次，分别为 1 项和 2 项测试；均为页面加载后立即导入合成 PNG 的用例），延长到 20 秒仍不恢复，因此不是慢，而是导入未完成。本机 Chrome 冷启动、CPU 降速、导入中触发 Fast Refresh、hydration 前选择文件均未复现；CI 使用 Playwright 自带的无头 Chromium，本机测试使用 Google Chrome。已撤销无效的超时调整；Playwright 失败时保留 trace，CI 失败时上传 `playwright-traces` 产物，供下次复现时定位。该问题尚未修复，也未在真实用户浏览器中观察到。
