@@ -1,0 +1,16 @@
+node_modules
+**/node_modules
+**/.next
+**/out
+.git
+models/*.task
+models/*.tflite
+models/*.onnx
+models/*.partial
+apps/web/public/models
+apps/web/public/wasm
+apps/web/public/worker
+tests
+test-results
+playwright-report
+.env*

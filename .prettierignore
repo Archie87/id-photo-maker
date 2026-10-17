@@ -1,0 +1,13 @@
+node_modules
+.next
+out
+pnpm-lock.yaml
+apps/web/public/wasm
+apps/web/public/worker
+apps/web/public/models
+test-results
+playwright-report
+models/*.task
+models/*.tflite
+tests/fixtures/*.jpg
+apps/web/next-env.d.ts

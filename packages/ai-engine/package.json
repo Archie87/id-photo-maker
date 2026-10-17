@@ -1,0 +1,16 @@
+{
+  "name": "@id-photo/ai-engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./hivision": "./src/hivision.ts",
+    "./hair-cleanup": "./src/hair-cleanup.ts"
+  },
+  "dependencies": {
+    "@id-photo/spec-engine": "workspace:*",
+    "@mediapipe/tasks-vision": "0.10.32",
+    "onnxruntime-web": "1.30.0"
+  }
+}

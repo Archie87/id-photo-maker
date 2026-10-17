@@ -1,0 +1,11 @@
+{
+  "name": "@id-photo/print-engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "@id-photo/spec-engine": "workspace:*",
+    "pdf-lib": "^1.17.1"
+  }
+}

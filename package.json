@@ -1,0 +1,31 @@
+{
+  "name": "id-photo-maker",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "pnpm assets && pnpm --filter @id-photo/web dev",
+    "build": "pnpm assets && pnpm --filter @id-photo/web build",
+    "assets": "node scripts/prepare-assets.mjs",
+    "models:download": "node scripts/download-models.mjs",
+    "typecheck": "tsc --noEmit && pnpm --filter @id-photo/web typecheck",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "check": "pnpm typecheck && pnpm test && pnpm build",
+    "fixture:download": "node scripts/download-fixture.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.25.0",
+    "pdf-lib": "^1.17.1",
+    "prettier": "3.6.2",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  }
+}

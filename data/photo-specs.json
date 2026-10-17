@@ -1,0 +1,530 @@
+[
+  {
+    "id": "one-inch",
+    "name": "一寸",
+    "widthMm": 25,
+    "heightMm": 35,
+    "dpi": 300,
+    "head": {
+      "minRatio": 0.5,
+      "maxRatio": 0.69
+    },
+    "eyes": {
+      "minY": 0.38,
+      "maxY": 0.52
+    },
+    "background": ["#ffffff", "#628bce", "#d74532"],
+    "file": {
+      "format": ["jpg", "png"],
+      "minKb": null,
+      "maxKb": null
+    },
+    "source": "https://github.com/Zeyi-Lin/HivisionIDPhotos/blob/5c191e2577f14755a69d9df6db415fab23aca484/demo/assets/size_list_CN.csv",
+    "lastVerified": "2026-10-02",
+    "status": "preset",
+    "verificationNote": "尺寸对齐 Hivision 规格表（300 DPI）；毫米值为对应打印预设，非办证机构完整规范。头高/眼高仅为构图参考。"
+  },
+  {
+    "id": "two-inch",
+    "name": "二寸",
+    "widthMm": 35,
+    "heightMm": 53,
+    "dpi": 300,
+    "head": {
+      "minRatio": 0.5,
+      "maxRatio": 0.69
+    },
+    "eyes": {
+      "minY": 0.38,
+      "maxY": 0.52
+    },
+    "background": ["#ffffff", "#628bce", "#d74532"],
+    "file": {
+      "format": ["jpg", "png"],
+      "minKb": null,
+      "maxKb": null
+    },
+    "source": "https://github.com/Zeyi-Lin/HivisionIDPhotos/blob/5c191e2577f14755a69d9df6db415fab23aca484/demo/assets/size_list_CN.csv",
+    "lastVerified": "2026-10-02",
+    "status": "preset",
+    "verificationNote": "尺寸对齐 Hivision 规格表（300 DPI）；毫米值为对应打印预设，非办证机构完整规范。头高/眼高仅为构图参考。"
+  },
+  {
+    "id": "small-one-inch",
+    "name": "小一寸",
+    "widthMm": 22,
+    "heightMm": 32,
+    "dpi": 300,
+    "head": {
+      "minRatio": 0.5,
+      "maxRatio": 0.69
+    },
+    "eyes": {
+      "minY": 0.38,
+      "maxY": 0.52
+    },
+    "background": ["#ffffff", "#628bce", "#d74532"],
+    "file": {
+      "format": ["jpg", "png"],
+      "minKb": null,
+      "maxKb": null
+    },
+    "source": "https://github.com/Zeyi-Lin/HivisionIDPhotos/blob/5c191e2577f14755a69d9df6db415fab23aca484/demo/assets/size_list_CN.csv",
+    "lastVerified": "2026-10-02",
+    "status": "preset",
+    "verificationNote": "尺寸对齐 Hivision 规格表（300 DPI）；毫米值为对应打印预设，非办证机构完整规范。头高/眼高仅为构图参考。"
+  },
+  {
+    "id": "small-two-inch",
+    "name": "小二寸",
+    "widthMm": 35,
+    "heightMm": 45,
+    "dpi": 300,
+    "head": {
+      "minRatio": 0.5,
+      "maxRatio": 0.69
+    },
+    "eyes": {
+      "minY": 0.38,
+      "maxY": 0.52
+    },
+    "background": ["#ffffff", "#628bce", "#d74532"],
+    "file": {
+      "format": ["jpg", "png"],
+      "minKb": null,
+      "maxKb": null
+    },
+    "source": "https://github.com/Zeyi-Lin/HivisionIDPhotos/blob/5c191e2577f14755a69d9df6db415fab23aca484/demo/assets/size_list_CN.csv",
+    "lastVerified": "2026-10-02",
+    "status": "preset",
+    "verificationNote": "尺寸对齐 Hivision 规格表（300 DPI）；毫米值为对应打印预设，非办证机构完整规范。头高/眼高仅为构图参考。"
+  },
+  {
+    "id": "large-one-inch",
+    "name": "大一寸",
+    "widthMm": 33,
+    "heightMm": 48,
+    "dpi": 300,
+    "head": {
+      "minRatio": 0.5,
+      "maxRatio": 0.69
+    },
+    "eyes": {
+      "minY": 0.38,
+      "maxY": 0.52
+    },
+    "background": ["#ffffff", "#628bce", "#d74532"],
+    "file": {
+      "format": ["jpg", "png"],
+      "minKb": null,
+      "maxKb": null
+    },
+    "source": "https://github.com/Zeyi-Lin/HivisionIDPhotos/blob/5c191e2577f14755a69d9df6db415fab23aca484/demo/assets/size_list_CN.csv",
+    "lastVerified": "2026-10-02",
+    "status": "preset",
+    "verificationNote": "尺寸对齐 Hivision 规格表（300 DPI）；毫米值为对应打印预设，非办证机构完整规范。头高/眼高仅为构图参考。"
+  },
+  {
+    "id": "large-two-inch",
+    "name": "大二寸",
+    "widthMm": 35,
+    "heightMm": 53,
+    "dpi": 300,
+    "head": {
+      "minRatio": 0.5,
+      "maxRatio": 0.69
+    },
+    "eyes": {
+      "minY": 0.38,
+      "maxY": 0.52
+    },
+    "background": ["#ffffff", "#628bce", "#d74532"],
+    "file": {
+      "format": ["jpg", "png"],
+      "minKb": null,
+      "maxKb": null
+    },
+    "source": "https://github.com/Zeyi-Lin/HivisionIDPhotos/blob/5c191e2577f14755a69d9df6db415fab23aca484/demo/assets/size_list_CN.csv",
+    "lastVerified": "2026-10-02",
+    "status": "preset",
+    "verificationNote": "尺寸对齐 Hivision 规格表（300 DPI）；毫米值为对应打印预设，非办证机构完整规范。头高/眼高仅为构图参考。"
+  },
+  {
+    "id": "five-inch",
+    "name": "五寸",
+    "widthMm": 88.9,
+    "heightMm": 126.92,
+    "dpi": 300,
+    "head": {
+      "minRatio": 0.5,
+      "maxRatio": 0.69
+    },
+    "eyes": {
+      "minY": 0.38,
+      "maxY": 0.52
+    },
+    "background": ["#ffffff", "#628bce", "#d74532"],
+    "file": {
+      "format": ["jpg", "png"],
+      "minKb": null,
+      "maxKb": null
+    },
+    "source": "https://github.com/Zeyi-Lin/HivisionIDPhotos/blob/5c191e2577f14755a69d9df6db415fab23aca484/demo/assets/size_list_CN.csv",
+    "lastVerified": "2026-10-02",
+    "status": "preset",
+    "verificationNote": "Hivision 五寸预设为 1050 × 1499 px，保留上游像素；未单独核验毫米打印尺寸，此项不提供排版。",
+    "pixelSize": {
+      "width": 1050,
+      "height": 1499
+    }
+  },
+  {
+    "id": "teacher-qualification",
+    "name": "教师资格证",
+    "widthMm": 24.98,
+    "heightMm": 34.97,
+    "dpi": 300,
+    "head": {
+      "minRatio": 0.5,
+      "maxRatio": 0.69
+    },
+    "eyes": {
+      "minY": 0.38,
+      "maxY": 0.52
+    },
+    "background": ["#ffffff", "#628bce", "#d74532"],
+    "file": {
+      "format": ["jpg", "png"],
+      "minKb": null,
+      "maxKb": null
+    },
+    "source": "https://github.com/Zeyi-Lin/HivisionIDPhotos/blob/5c191e2577f14755a69d9df6db415fab23aca484/demo/assets/size_list_CN.csv",
+    "lastVerified": "2026-10-02",
+    "status": "preset",
+    "verificationNote": "像素取自 Hivision，300 DPI 为本项目输出默认值；未核验当前受理机构要求，底色、格式和 KB 请按机构要求选择。毫米仅为参考，不用于排版。",
+    "pixelSize": {
+      "width": 295,
+      "height": 413
+    }
+  },
+  {
+    "id": "civil-service-exam",
+    "name": "国家公务员考试",
+    "widthMm": 24.98,
+    "heightMm": 34.97,
+    "dpi": 300,
+    "head": {
+      "minRatio": 0.5,
+      "maxRatio": 0.69
+    },
+    "eyes": {
+      "minY": 0.38,
+      "maxY": 0.52
+    },
+    "background": ["#ffffff", "#628bce", "#d74532"],
+    "file": {
+      "format": ["jpg", "png"],
+      "minKb": null,
+      "maxKb": null
+    },
+    "source": "https://github.com/Zeyi-Lin/HivisionIDPhotos/blob/5c191e2577f14755a69d9df6db415fab23aca484/demo/assets/size_list_CN.csv",
+    "lastVerified": "2026-10-02",
+    "status": "preset",
+    "verificationNote": "像素取自 Hivision，300 DPI 为本项目输出默认值；未核验当前受理机构要求，底色、格式和 KB 请按机构要求选择。毫米仅为参考，不用于排版。",
+    "pixelSize": {
+      "width": 295,
+      "height": 413
+    }
+  },
+  {
+    "id": "primary-accounting-exam",
+    "name": "初级会计考试",
+    "widthMm": 24.98,
+    "heightMm": 34.97,
+    "dpi": 300,
+    "head": {
+      "minRatio": 0.5,
+      "maxRatio": 0.69
+    },
+    "eyes": {
+      "minY": 0.38,
+      "maxY": 0.52
+    },
+    "background": ["#ffffff", "#628bce", "#d74532"],
+    "file": {
+      "format": ["jpg", "png"],
+      "minKb": null,
+      "maxKb": null
+    },
+    "source": "https://github.com/Zeyi-Lin/HivisionIDPhotos/blob/5c191e2577f14755a69d9df6db415fab23aca484/demo/assets/size_list_CN.csv",
+    "lastVerified": "2026-10-02",
+    "status": "preset",
+    "verificationNote": "像素取自 Hivision，300 DPI 为本项目输出默认值；未核验当前受理机构要求，底色、格式和 KB 请按机构要求选择。毫米仅为参考，不用于排版。",
+    "pixelSize": {
+      "width": 295,
+      "height": 413
+    }
+  },
+  {
+    "id": "cet-exam",
+    "name": "英语四六级考试",
+    "widthMm": 12.19,
+    "heightMm": 16.26,
+    "dpi": 300,
+    "head": {
+      "minRatio": 0.5,
+      "maxRatio": 0.69
+    },
+    "eyes": {
+      "minY": 0.38,
+      "maxY": 0.52
+    },
+    "background": ["#ffffff", "#628bce", "#d74532"],
+    "file": {
+      "format": ["jpg", "png"],
+      "minKb": null,
+      "maxKb": null
+    },
+    "source": "https://github.com/Zeyi-Lin/HivisionIDPhotos/blob/5c191e2577f14755a69d9df6db415fab23aca484/demo/assets/size_list_CN.csv",
+    "lastVerified": "2026-10-02",
+    "status": "preset",
+    "verificationNote": "像素取自 Hivision，300 DPI 为本项目输出默认值；未核验当前受理机构要求，底色、格式和 KB 请按机构要求选择。毫米仅为参考，不用于排版。",
+    "pixelSize": {
+      "width": 144,
+      "height": 192
+    }
+  },
+  {
+    "id": "computer-level-exam",
+    "name": "计算机等级考试",
+    "widthMm": 33.02,
+    "heightMm": 48.01,
+    "dpi": 300,
+    "head": {
+      "minRatio": 0.5,
+      "maxRatio": 0.69
+    },
+    "eyes": {
+      "minY": 0.38,
+      "maxY": 0.52
+    },
+    "background": ["#ffffff", "#628bce", "#d74532"],
+    "file": {
+      "format": ["jpg", "png"],
+      "minKb": null,
+      "maxKb": null
+    },
+    "source": "https://github.com/Zeyi-Lin/HivisionIDPhotos/blob/5c191e2577f14755a69d9df6db415fab23aca484/demo/assets/size_list_CN.csv",
+    "lastVerified": "2026-10-02",
+    "status": "preset",
+    "verificationNote": "像素取自 Hivision，300 DPI 为本项目输出默认值；未核验当前受理机构要求，底色、格式和 KB 请按机构要求选择。毫米仅为参考，不用于排版。",
+    "pixelSize": {
+      "width": 390,
+      "height": 567
+    }
+  },
+  {
+    "id": "graduate-exam",
+    "name": "研究生考试",
+    "widthMm": 44.96,
+    "heightMm": 60.03,
+    "dpi": 300,
+    "head": {
+      "minRatio": 0.5,
+      "maxRatio": 0.69
+    },
+    "eyes": {
+      "minY": 0.38,
+      "maxY": 0.52
+    },
+    "background": ["#ffffff", "#628bce", "#d74532"],
+    "file": {
+      "format": ["jpg", "png"],
+      "minKb": null,
+      "maxKb": null
+    },
+    "source": "https://github.com/Zeyi-Lin/HivisionIDPhotos/blob/5c191e2577f14755a69d9df6db415fab23aca484/demo/assets/size_list_CN.csv",
+    "lastVerified": "2026-10-02",
+    "status": "preset",
+    "verificationNote": "像素取自 Hivision，300 DPI 为本项目输出默认值；未核验当前受理机构要求，底色、格式和 KB 请按机构要求选择。毫米仅为参考，不用于排版。",
+    "pixelSize": {
+      "width": 531,
+      "height": 709
+    }
+  },
+  {
+    "id": "social-security-card",
+    "name": "社保卡",
+    "widthMm": 30.31,
+    "heightMm": 37.34,
+    "dpi": 300,
+    "head": {
+      "minRatio": 0.5,
+      "maxRatio": 0.69
+    },
+    "eyes": {
+      "minY": 0.38,
+      "maxY": 0.52
+    },
+    "background": ["#ffffff", "#628bce", "#d74532"],
+    "file": {
+      "format": ["jpg", "png"],
+      "minKb": null,
+      "maxKb": null
+    },
+    "source": "https://github.com/Zeyi-Lin/HivisionIDPhotos/blob/5c191e2577f14755a69d9df6db415fab23aca484/demo/assets/size_list_CN.csv",
+    "lastVerified": "2026-10-02",
+    "status": "preset",
+    "verificationNote": "像素取自 Hivision，300 DPI 为本项目输出默认值；未核验当前受理机构要求，底色、格式和 KB 请按机构要求选择。毫米仅为参考，不用于排版。",
+    "pixelSize": {
+      "width": 358,
+      "height": 441
+    }
+  },
+  {
+    "id": "electronic-driver-license",
+    "name": "电子驾驶证",
+    "widthMm": 22.01,
+    "heightMm": 32.0,
+    "dpi": 300,
+    "head": {
+      "minRatio": 0.5,
+      "maxRatio": 0.69
+    },
+    "eyes": {
+      "minY": 0.38,
+      "maxY": 0.52
+    },
+    "background": ["#ffffff", "#628bce", "#d74532"],
+    "file": {
+      "format": ["jpg", "png"],
+      "minKb": null,
+      "maxKb": null
+    },
+    "source": "https://github.com/Zeyi-Lin/HivisionIDPhotos/blob/5c191e2577f14755a69d9df6db415fab23aca484/demo/assets/size_list_CN.csv",
+    "lastVerified": "2026-10-02",
+    "status": "preset",
+    "verificationNote": "像素取自 Hivision，300 DPI 为本项目输出默认值；未核验当前受理机构要求，底色、格式和 KB 请按机构要求选择。毫米仅为参考，不用于排版。",
+    "pixelSize": {
+      "width": 260,
+      "height": 378
+    }
+  },
+  {
+    "id": "us-visa",
+    "name": "美国签证",
+    "widthMm": 50.8,
+    "heightMm": 50.8,
+    "dpi": 300,
+    "head": {
+      "minRatio": 0.5,
+      "maxRatio": 0.69
+    },
+    "eyes": {
+      "minY": 0.38,
+      "maxY": 0.52
+    },
+    "background": ["#ffffff", "#628bce", "#d74532"],
+    "file": {
+      "format": ["jpg", "png"],
+      "minKb": null,
+      "maxKb": null
+    },
+    "source": "https://github.com/Zeyi-Lin/HivisionIDPhotos/blob/5c191e2577f14755a69d9df6db415fab23aca484/demo/assets/size_list_CN.csv",
+    "lastVerified": "2026-10-02",
+    "status": "preset",
+    "verificationNote": "像素取自 Hivision，300 DPI 为本项目输出默认值；未核验当前受理机构要求，底色、格式和 KB 请按机构要求选择。毫米仅为参考，不用于排版。",
+    "pixelSize": {
+      "width": 600,
+      "height": 600
+    }
+  },
+  {
+    "id": "japan-visa",
+    "name": "日本签证",
+    "widthMm": 24.98,
+    "heightMm": 34.97,
+    "dpi": 300,
+    "head": {
+      "minRatio": 0.5,
+      "maxRatio": 0.69
+    },
+    "eyes": {
+      "minY": 0.38,
+      "maxY": 0.52
+    },
+    "background": ["#ffffff", "#628bce", "#d74532"],
+    "file": {
+      "format": ["jpg", "png"],
+      "minKb": null,
+      "maxKb": null
+    },
+    "source": "https://github.com/Zeyi-Lin/HivisionIDPhotos/blob/5c191e2577f14755a69d9df6db415fab23aca484/demo/assets/size_list_CN.csv",
+    "lastVerified": "2026-10-02",
+    "status": "preset",
+    "verificationNote": "像素取自 Hivision，300 DPI 为本项目输出默认值；未核验当前受理机构要求，底色、格式和 KB 请按机构要求选择。毫米仅为参考，不用于排版。",
+    "pixelSize": {
+      "width": 295,
+      "height": 413
+    }
+  },
+  {
+    "id": "korea-visa",
+    "name": "韩国签证",
+    "widthMm": 34.97,
+    "heightMm": 44.96,
+    "dpi": 300,
+    "head": {
+      "minRatio": 0.5,
+      "maxRatio": 0.69
+    },
+    "eyes": {
+      "minY": 0.38,
+      "maxY": 0.52
+    },
+    "background": ["#ffffff", "#628bce", "#d74532"],
+    "file": {
+      "format": ["jpg", "png"],
+      "minKb": null,
+      "maxKb": null
+    },
+    "source": "https://github.com/Zeyi-Lin/HivisionIDPhotos/blob/5c191e2577f14755a69d9df6db415fab23aca484/demo/assets/size_list_CN.csv",
+    "lastVerified": "2026-10-02",
+    "status": "preset",
+    "verificationNote": "像素取自 Hivision，300 DPI 为本项目输出默认值；未核验当前受理机构要求，底色、格式和 KB 请按机构要求选择。毫米仅为参考，不用于排版。",
+    "pixelSize": {
+      "width": 413,
+      "height": 531
+    }
+  },
+  {
+    "id": "cn-resident-id-electronic",
+    "name": "居民身份证电子照",
+    "widthMm": 26,
+    "heightMm": 32,
+    "dpi": 350,
+    "head": {
+      "minRatio": 0.5,
+      "maxRatio": 0.69
+    },
+    "eyes": {
+      "minY": 0.38,
+      "maxY": 0.52
+    },
+    "background": ["#ffffff"],
+    "file": {
+      "format": ["jpg"],
+      "minKb": null,
+      "maxKb": null
+    },
+    "source": "https://ncga.nc.gov.cn/ncgaj/zfcg/202512/2adc274baea14b8ba4fb03dcb4723cce.shtml",
+    "lastVerified": "2026-10-02",
+    "status": "preset",
+    "pixelSize": {
+      "width": 358,
+      "height": 441
+    },
+    "verificationNote": "已核对 358 × 441 px、350 DPI、白底 JPG；仅基础输出预设，未覆盖完整制证要求。KB 范围以受理机构为准。",
+    "restrictBackground": true
+  }
+]

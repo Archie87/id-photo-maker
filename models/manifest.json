@@ -1,0 +1,42 @@
+{
+  "models": [
+    {
+      "file": "selfie_multiclass_256x256.tflite",
+      "url": "https://storage.googleapis.com/mediapipe-models/image_segmenter/selfie_multiclass_256x256/float32/1/selfie_multiclass_256x256.tflite",
+      "sha256": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0",
+      "bytes": 16371837,
+      "upstream": "Google MediaPipe SelfieMulticlass",
+      "source": "https://storage.googleapis.com/mediapipe-assets/Model%20Card%20Multiclass%20Segmentation.pdf",
+      "version": "float32/1",
+      "license": "Apache-2.0 (model card page 1)",
+      "retrievedOn": "2026-10-02"
+    },
+    {
+      "file": "hivision_modnet.onnx",
+      "url": "https://github.com/Zeyi-Lin/HivisionIDPhotos/releases/download/pretrained-model/hivision_modnet.onnx",
+      "sha256": "7e0cb9a2a841b426dd0daf1a788ec398dab059bc039041d62b15636c0783bc56",
+      "bytes": 25888609,
+      "upstream": "Zeyi-Lin/HivisionIDPhotos",
+      "source": "https://github.com/Zeyi-Lin/HivisionIDPhotos/blob/5c191e2577f14755a69d9df6db415fab23aca484/hivision/creator/human_matting.py",
+      "version": "pretrained-model release; content pinned by SHA-256",
+      "license": "Apache-2.0 (upstream repository LICENSE)",
+      "retrievedOn": "2026-10-02"
+    },
+    {
+      "file": "face_landmarker.task",
+      "url": "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task",
+      "sha256": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff",
+      "bytes": 3758596,
+      "upstream": "Google MediaPipe",
+      "retrievedOn": "2026-10-01"
+    },
+    {
+      "file": "selfie_segmenter.tflite",
+      "url": "https://storage.googleapis.com/mediapipe-models/image_segmenter/selfie_segmenter/float16/1/selfie_segmenter.tflite",
+      "sha256": "191ac9529ae506ee0beefa6b2c945a172dab9d07d1e802a290a4e4038226658b",
+      "bytes": 249537,
+      "upstream": "Google MediaPipe",
+      "retrievedOn": "2026-10-01"
+    }
+  ]
+}
